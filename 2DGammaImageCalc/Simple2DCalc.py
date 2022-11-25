@@ -29,8 +29,8 @@ from interpolation import interp
 # definition of 0mm is at the left edge of the first pixel
 
 # read as gray scale
-reference = cv2.imread('ref2.jpg', 0) # reference image
-test = cv2.imread('ref2.jpg', 0) # test image
+reference = cv2.imread('ref6.jpg', 0) # reference image
+test = cv2.imread('test6.jpg', 0) # test image
 #
 spacing = 0.1 # pixel spacing, scaling between pixel and real life, real units/pixel (e.g. mm/pixel)
 search_radius = 1 # real units (e.g. mm)
@@ -41,7 +41,7 @@ angular_step_size = 1 # degrees
 gammaImage = np.zeros((reference.shape[0], reference.shape[1]))
 print(gammaImage.shape)
 
-@njit
+#@njit
 def get_interp_image_x_y(xRange, yRange):
     xData = np.zeros(xRange)
     yData = np.zeros(yRange)
@@ -53,7 +53,7 @@ def get_interp_image_x_y(xRange, yRange):
 
 # ref pos is a list [x, y] from original image
 # computes gamma by interating test image
-@njit
+#@njit
 def get_2D_gamma_full_for_one_pixel(refPos):
     gammaList = List()
     # range of x values
@@ -136,8 +136,9 @@ def get_passing_rate():
     return str(passDecimal * 100) + '%'
 
 def main():
-    st = time.time()
     gammaImage = get_gamma_image()
+    st = time.time()
+    #gammaImage = get_gamma_image()
     et = time.time()
     print("calc time: " + str(et-st))
     plt.figure("Original Reference Image")

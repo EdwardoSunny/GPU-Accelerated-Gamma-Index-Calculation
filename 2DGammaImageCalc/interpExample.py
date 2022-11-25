@@ -7,6 +7,8 @@ xv, xh = np.linspace(0, 1,       nx, endpoint=True,  retstep=True)
 yv, yh = np.linspace(0, 2*np.pi, ny, endpoint=False, retstep=True)
 x, y = np.meshgrid(xv, yv, indexing='ij')
 
+
+
 test_function = lambda x, y: np.exp(x)*np.exp(np.sin(y))
 f = test_function(x, y)
 print(type(f))
