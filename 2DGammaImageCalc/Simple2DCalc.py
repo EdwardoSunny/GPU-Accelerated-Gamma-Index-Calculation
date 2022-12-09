@@ -4,6 +4,8 @@ import cv2, math
 import numpy as np
 import time
 from numba import njit
+from numba import cuda
+from numba import vectorize
 from numba.typed import List
 from interpolation import interp
 # assumes images are same resoltion/size
@@ -43,6 +45,7 @@ print(gammaImage.shape)
 # gpu_gamma_image = cuda.jit
 
 #@njit
+@cuda.jit(device=True)
 def get_interp_image_x_y(xRange, yRange):
     xData = np.zeros(xRange)
     yData = np.zeros(yRange)
@@ -55,6 +58,8 @@ def get_interp_image_x_y(xRange, yRange):
 # ref pos is a list [x, y] from original image
 # computes gamma by interating test image
 #@njit
+
+@vectorize(['float32(float32)'], target='cuda')
 def get_2D_gamma_full_for_one_pixel(refPos):
     gammaList = List()
     # range of x values
@@ -114,7 +119,6 @@ def get_zero_matrix(n, m):
         for m in range(0, n):
             tempVector.append(0)
         zeros.append(tempVector)
-    
 
 def get_gamma_image():
     for y in range(0, len(reference)):
