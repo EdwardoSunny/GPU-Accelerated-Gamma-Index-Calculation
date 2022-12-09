@@ -1,0 +1,3 @@
+finish writing last section:
+- why and how can applied GPU in python to gamma index
+- mention gap (there is GPU but in matlab, there is gamma index in python but no accelerated)
