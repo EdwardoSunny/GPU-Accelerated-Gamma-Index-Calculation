@@ -1,0 +1,30 @@
+(TeX-add-style-hook
+ "ref"
+ (lambda ()
+   (LaTeX-add-bibitems
+    "Bakai"
+    "Cheng"
+    "Chen"
+    "Depuydt"
+    "Gardner"
+    "Georgescu"
+    "Jiang"
+    "Ju"
+    "Lam"
+    "Low"
+    "Ma"
+    "Michalakes"
+    "Spezi"
+    "Stock"
+    "Gu"
+    "Biggs"
+    "Stojadinovic"
+    "Wendling"
+    "NVidia"
+    "CDC"
+    "Christopherpoole"
+    "Matlab"
+    "intel"
+    "SBU"))
+ :bibtex)
+
