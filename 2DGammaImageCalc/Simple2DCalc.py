@@ -33,6 +33,7 @@ from interpolation import interp
 # read as gray scale
 reference = cv2.imread('ref6.jpg', 0) # reference image
 test = cv2.imread('test6.jpg', 0) # test image
+print(type(reference))
 #
 spacing = 0.1 # pixel spacing, scaling between pixel and real life, real units/pixel (e.g. mm/pixel)
 search_radius = 1 # real units (e.g. mm)
@@ -44,7 +45,7 @@ gammaImage = np.zeros((reference.shape[0], reference.shape[1]))
 print(gammaImage.shape)
 
 #@njit
-@cuda.jit(device=True)
+# @cuda.jit(device=True)
 def get_interp_image_x_y(xRange, yRange):
     xData = np.zeros(xRange)
     yData = np.zeros(yRange)
@@ -58,7 +59,7 @@ def get_interp_image_x_y(xRange, yRange):
 # computes gamma by interating test image
 #@njit
 
-@vectorize(['float32(float32)'], target='cuda')
+# @vectorize(['float32(float32)'], target='cuda')
 def get_2D_gamma_full_for_one_pixel(refPos):
     gammaList = List()
     # range of x values
