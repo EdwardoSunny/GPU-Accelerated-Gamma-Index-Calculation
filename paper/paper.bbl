@@ -1,0 +1,925 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{NVidia}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=400efede2738487b1ee18e2e22d40984}{%
+           family={“@NVIDIAGeForce”},
+           familyi={“\bibinitperiod}}}%
+      }
+      \strng{namehash}{400efede2738487b1ee18e2e22d40984}
+      \strng{fullhash}{400efede2738487b1ee18e2e22d40984}
+      \strng{bibnamehash}{400efede2738487b1ee18e2e22d40984}
+      \strng{authorbibnamehash}{400efede2738487b1ee18e2e22d40984}
+      \strng{authornamehash}{400efede2738487b1ee18e2e22d40984}
+      \strng{authorfullhash}{400efede2738487b1ee18e2e22d40984}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NVIDIA}
+      \field{title}{Nvidia GeForce 10 series graphics cards}
+      \verb{urlraw}
+      \verb https://www.nvidia.com/en-us/geforce/10-series/
+      \endverb
+      \verb{url}
+      \verb https://www.nvidia.com/en-us/geforce/10-series/
+      \endverb
+    \endentry
+    \entry{CDC}{misc}{}
+      \list{publisher}{2}{%
+        {Centers for Disease Control}%
+        {Prevention}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Centers for Disease Control and Prevention}
+      \field{title}{An update on cancer deaths in the United States}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.cdc.gov/cancer/dcpc/research/update-on-cancer-deaths/index.htm
+      \endverb
+      \verb{url}
+      \verb https://www.cdc.gov/cancer/dcpc/research/update-on-cancer-deaths/index.htm
+      \endverb
+    \endentry
+    \entry{Bakai}{article}{}
+      \name{author}{3}{}{%
+        {{hash=51aee997aa2f1f1a6dac545c0457df4e}{%
+           family={Bakai},
+           familyi={B\bibinitperiod},
+           given={Annemarie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e668930bb2c8cc36d876f6e07f533795}{%
+           family={Alber},
+           familyi={A\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f0093b7262ad070e22fb00a700747522}{%
+           family={Nüsslin},
+           familyi={N\bibinitperiod},
+           given={Fridtjof},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \strng{fullhash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \strng{bibnamehash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \strng{authorbibnamehash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \strng{authornamehash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \strng{authorfullhash}{1d5f4348d2f89a6a3a8105f8c4003f53}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine and Biology}
+      \field{number}{21}
+      \field{title}{A revision of the evaluation concept for the comparison of dose distributions}
+      \field{volume}{48}
+      \field{year}{2003}
+      \field{pages}{3543\bibrangedash 3553}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1088/0031-9155/48/21/006
+      \endverb
+    \endentry
+    \entry{Biggs}{article}{}
+      \name{author}{11}{}{%
+        {{hash=5f23e7c0c61d7e93a0b70b2ebbb1cfbe}{%
+           family={Biggs},
+           familyi={B\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fdfb8c9703c30ab92a27606ff1482ac6}{%
+           family={Jennings},
+           familyi={J\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ecaf9c5a4ef434310001f28c683d483a}{%
+           family={Swerdloff},
+           familyi={S\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4e1d16434f23b88ee7ffd40a176ff593}{%
+           family={Chlap},
+           familyi={C\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4db125356f0db9543ed9eeba23e08f16}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Derek},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f71ff2cda875ca17bf2cebbd4515f648}{%
+           family={Rembish},
+           familyi={R\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c20308b095fe13ab6bb69f9f8d8de654}{%
+           family={McAloney},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=79bac2ac6f8c558268a9b92ed95a7e88}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c7e2be1a509b347f503a091b0eaf0aae}{%
+           family={Ayala},
+           familyi={A\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=df3fd0a54e27c7fab5c04b124a00df1b}{%
+           family={Guan},
+           familyi={G\bibinitperiod},
+           given={Fada},
+           giveni={F\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{4974f299a51efa5e18cfb882baac42ac}
+      \strng{fullhash}{1f27a942ddef0466bb45bf0c7edaad79}
+      \strng{bibnamehash}{4974f299a51efa5e18cfb882baac42ac}
+      \strng{authorbibnamehash}{4974f299a51efa5e18cfb882baac42ac}
+      \strng{authornamehash}{4974f299a51efa5e18cfb882baac42ac}
+      \strng{authorfullhash}{1f27a942ddef0466bb45bf0c7edaad79}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Open Source Software}
+      \field{number}{78}
+      \field{title}{PyMedPhys: A community effort to develop an open, python based Standard Library for Medical Physics Applications}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{pages}{4555}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21105/joss.04555
+      \endverb
+    \endentry
+    \entry{Chen}{article}{}
+      \name{author}{5}{}{%
+        {{hash=4d3101ea8403d0406f7a497cd4fee72c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mingli},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e226fe02709a888c02380b7eaf071f8c}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Weiguo},
+           giveni={W\bibinitperiod}}}%
+        {{hash=de8e4778ef910d2e3915c1169cebc4a6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Quan},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=ea8ec2d4c10763ed10a8cda347983b4f}{%
+           family={Ruchala},
+           familyi={R\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b6a10b6b1392bcd08304ecdfcde2dfa9}{%
+           family={Olivera},
+           familyi={O\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{78c0a44bba11bbfbef3c40a2914cfc22}
+      \strng{fullhash}{5f964e27f23a0ce8b8132b1986edb0a2}
+      \strng{bibnamehash}{78c0a44bba11bbfbef3c40a2914cfc22}
+      \strng{authorbibnamehash}{78c0a44bba11bbfbef3c40a2914cfc22}
+      \strng{authornamehash}{78c0a44bba11bbfbef3c40a2914cfc22}
+      \strng{authorfullhash}{5f964e27f23a0ce8b8132b1986edb0a2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine and Biology}
+      \field{number}{7}
+      \field{title}{Efficient gamma index calculation using fast euclidean distance transform}
+      \field{volume}{54}
+      \field{year}{2009}
+      \field{pages}{2037\bibrangedash 2047}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1088/0031-9155/54/7/012
+      \endverb
+    \endentry
+    \entry{Cheng}{article}{}
+      \name{author}{5}{}{%
+        {{hash=abbfb78c0cabb3f7a948b1d0d319bb11}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Abel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=96de7412d2ff799189d7dad1795de2cc}{%
+           family={Harms},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d1a574aa4d5281d33e45fedf5995b370}{%
+           family={Gerber},
+           familyi={G\bibinitperiod},
+           given={Russell\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=fb80207272435b9b7827cfd96edf69e6}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8881807286a343d0ed2250d5a87ace57}{%
+           family={Purdy},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{35fe4a3d750cc6638e429efc7e80e6c7}
+      \strng{fullhash}{f1cc0fa25b5357b459b4d03685ec77d5}
+      \strng{bibnamehash}{35fe4a3d750cc6638e429efc7e80e6c7}
+      \strng{authorbibnamehash}{35fe4a3d750cc6638e429efc7e80e6c7}
+      \strng{authornamehash}{35fe4a3d750cc6638e429efc7e80e6c7}
+      \strng{authorfullhash}{f1cc0fa25b5357b459b4d03685ec77d5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Physics}
+      \field{number}{5}
+      \field{title}{Systematic verification of a three-dimensional electron beam dose calculation algorithm}
+      \field{volume}{23}
+      \field{year}{1996}
+      \field{pages}{685\bibrangedash 693}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1118/1.597714
+      \endverb
+    \endentry
+    \entry{Depuydt}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6646812bd175ae73c0f5ea97af927607}{%
+           family={Depuydt},
+           familyi={D\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=aff5fcb5b6b46e3f497014f9c0234815}{%
+           family={Van\bibnamedelima Esch},
+           familyi={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod}}}%
+        {{hash=11a0dda47d237df61d987cfdaa297e2f}{%
+           family={Huyskens},
+           familyi={H\bibinitperiod},
+           given={Dominique\bibnamedelima Pierre},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{36fe123ad9260e6f890ca5699ccee156}
+      \strng{fullhash}{36fe123ad9260e6f890ca5699ccee156}
+      \strng{bibnamehash}{36fe123ad9260e6f890ca5699ccee156}
+      \strng{authorbibnamehash}{36fe123ad9260e6f890ca5699ccee156}
+      \strng{authornamehash}{36fe123ad9260e6f890ca5699ccee156}
+      \strng{authorfullhash}{36fe123ad9260e6f890ca5699ccee156}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiotherapy and Oncology}
+      \field{number}{3}
+      \field{title}{A quantitative evaluation of IMRT dose distributions: Refinement and clinical assessment of the Gamma Evaluation}
+      \field{volume}{62}
+      \field{year}{2002}
+      \field{pages}{309\bibrangedash 319}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/s0167-8140(01)00497-2
+      \endverb
+    \endentry
+    \entry{Gardner}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a2e5c0c680f4f040982155c194e90ec2}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9e2d5b32d623f7234e823376abea275d}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c4f7abd5872ec1138d106b26f1bc75a1}{%
+           family={Chetty},
+           familyi={C\bibinitperiod},
+           given={Indrin\bibnamedelima J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \strng{fullhash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \strng{bibnamehash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \strng{authorbibnamehash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \strng{authornamehash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \strng{authorfullhash}{9d7bc771f80d68c8b43a3fba61caacae}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hematology/Oncology Clinics of North America}
+      \field{number}{6}
+      \field{title}{Modern radiation therapy planning and delivery}
+      \field{volume}{33}
+      \field{year}{2019}
+      \field{pages}{947\bibrangedash 962}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.hoc.2019.08.005
+      \endverb
+    \endentry
+    \entry{Georgescu}{article}{}
+      \name{author}{3}{}{%
+        {{hash=68530236de838d8c195aa460ce805536}{%
+           family={Georgescu},
+           familyi={G\bibinitperiod},
+           given={Serban},
+           giveni={S\bibinitperiod}}}%
+        {{hash=891e70125f0818e9973ab5d91a2bedd8}{%
+           family={Chow},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8401abcff3da8ad26daef0a4a751c6b3}{%
+           family={Okuda},
+           familyi={O\bibinitperiod},
+           given={Hiroshi},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{861c0a06bb628d603135007937c864be}
+      \strng{fullhash}{861c0a06bb628d603135007937c864be}
+      \strng{bibnamehash}{861c0a06bb628d603135007937c864be}
+      \strng{authorbibnamehash}{861c0a06bb628d603135007937c864be}
+      \strng{authornamehash}{861c0a06bb628d603135007937c864be}
+      \strng{authorfullhash}{861c0a06bb628d603135007937c864be}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archives of Computational Methods in Engineering}
+      \field{number}{2}
+      \field{title}{GPU acceleration for FEM-based structural analysis}
+      \field{volume}{20}
+      \field{year}{2013}
+      \field{pages}{111\bibrangedash 121}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/s11831-013-9082-8
+      \endverb
+    \endentry
+    \entry{Matlab}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GPU Acceleration MATLAB Simulink}
+      \field{title}{GPU acceleration}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/wavelet/gpu-acceleration.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/wavelet/gpu-acceleration.html
+      \endverb
+    \endentry
+    \entry{Gu}{article}{}
+      \name{author}{3}{}{%
+        {{hash=53d388d3158990332a583cd0a8b29bec}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Xuejun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1e49c77d6ce153147f8a6fbede38aac9}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=80f65405f1e588d6d22f7f03a9cbed1b}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Steve\bibnamedelima B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \strng{fullhash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \strng{bibnamehash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \strng{authorbibnamehash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \strng{authornamehash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \strng{authorfullhash}{947caec4fb57fd96c1f486d0f0e97d73}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine and Biology}
+      \field{number}{5}
+      \field{title}{GPU-based Fast Gamma Index Calculation}
+      \field{volume}{56}
+      \field{year}{2011}
+      \field{pages}{1431\bibrangedash 1441}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1088/0031-9155/56/5/014
+      \endverb
+    \endentry
+    \entry{intel}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4e5bbaeafc82ab7aa1385bea8ef5d30a}{%
+           family={intel},
+           familyi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \strng{fullhash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \strng{bibnamehash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \strng{authorbibnamehash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \strng{authornamehash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \strng{authorfullhash}{4e5bbaeafc82ab7aa1385bea8ef5d30a}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Intel}
+      \field{title}{What is a GPU? graphics processing units defined}
+      \verb{urlraw}
+      \verb https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html
+      \endverb
+      \verb{url}
+      \verb https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html
+      \endverb
+    \endentry
+    \entry{Jiang}{article}{}
+      \name{author}{6}{}{%
+        {{hash=80f65405f1e588d6d22f7f03a9cbed1b}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Steve\bibnamedelima B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=748a670b6eb424ba17c362bbe8556bd0}{%
+           family={Sharp},
+           familyi={S\bibinitperiod},
+           given={Greg\bibnamedelima C},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a6a39f642f3b4ce59c9bd3d3256a406d}{%
+           family={Neicu},
+           familyi={N\bibinitperiod},
+           given={Toni},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c428659ff9289d6e49c9a0d7f65d82e1}{%
+           family={Berbeco},
+           familyi={B\bibinitperiod},
+           given={Ross\bibnamedelima I},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=0041199b5c2ebc37b552e491b0c1704a}{%
+           family={Flampouri},
+           familyi={F\bibinitperiod},
+           given={Stella},
+           giveni={S\bibinitperiod}}}%
+        {{hash=88539f9fcea5f4ef4a9ec888ba2080eb}{%
+           family={Bortfeld},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2ef05628efdb4e83f105cdede170c3b}
+      \strng{fullhash}{757baff08ee859bb91a5b26e7cd2d121}
+      \strng{bibnamehash}{c2ef05628efdb4e83f105cdede170c3b}
+      \strng{authorbibnamehash}{c2ef05628efdb4e83f105cdede170c3b}
+      \strng{authornamehash}{c2ef05628efdb4e83f105cdede170c3b}
+      \strng{authorfullhash}{757baff08ee859bb91a5b26e7cd2d121}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine and Biology}
+      \field{number}{4}
+      \field{title}{On dose distribution comparison}
+      \field{volume}{51}
+      \field{year}{2006}
+      \field{pages}{759\bibrangedash 776}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1088/0031-9155/51/4/001
+      \endverb
+    \endentry
+    \entry{Ju}{article}{}
+      \name{author}{4}{}{%
+        {{hash=8628fe181e4892dd541bd3a2fd542fc1}{%
+           family={Ju},
+           familyi={J\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c6c5634f0da008d7bc446ee14125a340}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f967f6b51246cf632661681073e1b6d8}{%
+           family={Deasy},
+           familyi={D\bibinitperiod},
+           given={Joseph\bibnamedelima O.},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=acf0cad0360d6a2e994312cff7dc4ba5}{%
+           family={Low},
+           familyi={L\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{629df97907cffdc9dff8bce53755e636}
+      \strng{fullhash}{1bd823277419f1103fb00a8a81578426}
+      \strng{bibnamehash}{629df97907cffdc9dff8bce53755e636}
+      \strng{authorbibnamehash}{629df97907cffdc9dff8bce53755e636}
+      \strng{authornamehash}{629df97907cffdc9dff8bce53755e636}
+      \strng{authorfullhash}{1bd823277419f1103fb00a8a81578426}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Physics}
+      \field{number}{3}
+      \field{title}{Geometric interpretation of the $\gamma$ dose distribution comparison technique: Interpolation-free calculation}
+      \field{volume}{35}
+      \field{year}{2008}
+      \field{pages}{879\bibrangedash 887}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1118/1.2836952
+      \endverb
+    \endentry
+    \entry{Lam}{article}{}
+      \name{author}{3}{}{%
+        {{hash=31e738d2abdeaf4aad96d0dc47e87405}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Siu\bibnamedelima Kwan},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=5367bdb73444f39a0ea034f24f104805}{%
+           family={Pitrou},
+           familyi={P\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b8f8a4b90ef94fad8c504d0a293755d9}{%
+           family={Seibert},
+           familyi={S\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \strng{fullhash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \strng{bibnamehash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \strng{authorbibnamehash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \strng{authornamehash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \strng{authorfullhash}{0e3fe92a0dc3d3c6114b4c4a7b5319a4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Second Workshop on the LLVM Compiler Infrastructure in HPC LLVM 15}
+      \field{title}{Numba}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1145/2833157.2833162
+      \endverb
+    \endentry
+    \entry{Low}{article}{}
+      \name{author}{4}{}{%
+        {{hash=acf0cad0360d6a2e994312cff7dc4ba5}{%
+           family={Low},
+           familyi={L\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=96de7412d2ff799189d7dad1795de2cc}{%
+           family={Harms},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=90d2b7bf57445ff8ac4f7bd734e76802}{%
+           family={Mutic},
+           familyi={M\bibinitperiod},
+           given={Sasa},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8881807286a343d0ed2250d5a87ace57}{%
+           family={Purdy},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b0615feb2f88ed8cef6691282e05e4c}
+      \strng{fullhash}{24093fee48a0575795db62085d865848}
+      \strng{bibnamehash}{5b0615feb2f88ed8cef6691282e05e4c}
+      \strng{authorbibnamehash}{5b0615feb2f88ed8cef6691282e05e4c}
+      \strng{authornamehash}{5b0615feb2f88ed8cef6691282e05e4c}
+      \strng{authorfullhash}{24093fee48a0575795db62085d865848}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Physics}
+      \field{number}{5}
+      \field{title}{A technique for the quantitative evaluation of dose distributions}
+      \field{volume}{25}
+      \field{year}{1998}
+      \field{pages}{656\bibrangedash 661}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1118/1.598248
+      \endverb
+    \endentry
+    \entry{Ma}{article}{}
+      \name{author}{3}{}{%
+        {{hash=26f3b8f065f337f327a99920fa1e63cc}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=faef3d4209c7d786000f5b0df8861de5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lirong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fffcf683578928625eda0cd3ba9ae2e0}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xiang-Qun},
+           giveni={X\bibinithyphendelim Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \strng{fullhash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \strng{bibnamehash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \strng{authorbibnamehash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \strng{authornamehash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \strng{authorfullhash}{6716540d0b06b7b0e0b4f780584caa8e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Chemical Information and Modeling}
+      \field{number}{7}
+      \field{title}{GPU accelerated chemical similarity calculation for compound library comparison}
+      \field{volume}{51}
+      \field{year}{2011}
+      \field{pages}{1521\bibrangedash 1527}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1021/ci1004948
+      \endverb
+    \endentry
+    \entry{Michalakes}{article}{}
+      \name{author}{2}{}{%
+        {{hash=412d4c297ba90053d9b51da97ad93bfc}{%
+           family={Michalakes},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c64dc0bf806d87658ef9c0475404b604}{%
+           family={Vachharajani},
+           familyi={V\bibinitperiod},
+           given={Manish},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{840d21cf1702fe401275698038aab0d3}
+      \strng{fullhash}{840d21cf1702fe401275698038aab0d3}
+      \strng{bibnamehash}{840d21cf1702fe401275698038aab0d3}
+      \strng{authorbibnamehash}{840d21cf1702fe401275698038aab0d3}
+      \strng{authornamehash}{840d21cf1702fe401275698038aab0d3}
+      \strng{authorfullhash}{840d21cf1702fe401275698038aab0d3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2008 IEEE International Symposium on Parallel and Distributed Processing}
+      \field{title}{GPU acceleration of numerical weather prediction}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1109/ipdps.2008.4536351
+      \endverb
+    \endentry
+    \entry{SBU}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stony Brook Cancer Center}
+      \field{title}{Radiation therapy process}
+      \verb{urlraw}
+      \verb https://cancer.stonybrookmedicine.edu/RadiationTherapyProcess
+      \endverb
+      \verb{url}
+      \verb https://cancer.stonybrookmedicine.edu/RadiationTherapyProcess
+      \endverb
+    \endentry
+    \entry{Spezi}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d4ca9545de5af8a493c245c4d783bb01}{%
+           family={Spezi},
+           familyi={S\bibinitperiod},
+           given={Emiliano},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a090c064ee06d87ff906a5527d84e28b}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={D.\bibnamedelimi Geraint},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfe482032187c5f183c470ff282870d8}
+      \strng{fullhash}{dfe482032187c5f183c470ff282870d8}
+      \strng{bibnamehash}{dfe482032187c5f183c470ff282870d8}
+      \strng{authorbibnamehash}{dfe482032187c5f183c470ff282870d8}
+      \strng{authornamehash}{dfe482032187c5f183c470ff282870d8}
+      \strng{authorfullhash}{dfe482032187c5f183c470ff282870d8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiotherapy and Oncology}
+      \field{number}{2}
+      \field{title}{Gamma histograms for Radiotherapy Plan Evaluation}
+      \field{volume}{79}
+      \field{year}{2006}
+      \field{pages}{224\bibrangedash 230}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.radonc.2006.03.020
+      \endverb
+    \endentry
+    \entry{Stock}{article}{}
+      \name{author}{3}{}{%
+        {{hash=821c9f81972b43e1b292a29d79b67f64}{%
+           family={Stock},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5708f819124adeab839b9c7dbde5c52d}{%
+           family={Kroupa},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7a9b93047160843f088e5fce82c6ca85}{%
+           family={Georg},
+           familyi={G\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \strng{fullhash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \strng{bibnamehash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \strng{authorbibnamehash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \strng{authornamehash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \strng{authorfullhash}{c4bbb40527ec07e1c382b01607c4bd54}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine and Biology}
+      \field{number}{3}
+      \field{title}{Interpretation and evaluation of the $\gamma$ index and the $\gamma$ index angle for the verification of Imrt Hybrid Plans}
+      \field{volume}{50}
+      \field{year}{2005}
+      \field{pages}{399\bibrangedash 411}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1088/0031-9155/50/3/001
+      \endverb
+    \endentry
+    \entry{Stojadinovic}{article}{}
+      \name{author}{6}{}{%
+        {{hash=1aaee7213a856764d42a0afc809b8f63}{%
+           family={Stojadinovic},
+           familyi={S\bibinitperiod},
+           given={Strahinja},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5f87901c576dc708a0180f867132a4ad}{%
+           family={Ouyang},
+           familyi={O\bibinitperiod},
+           given={Luo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=53d388d3158990332a583cd0a8b29bec}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Xuejun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fed72c2a6398dc7876581b69ec91e463}{%
+           family={Pompoš},
+           familyi={P\bibinitperiod},
+           given={Arnold},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4bb7b72ea1576fa58ba598161753fdc6}{%
+           family={Bao},
+           familyi={B\bibinitperiod},
+           given={Qinan},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=3cfe376afcf8730cc6dadfb5ea0610a2}{%
+           family={Solberg},
+           familyi={S\bibinitperiod},
+           given={Timothy\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9d5933917f907ae5a0f32c1e36c391e}
+      \strng{fullhash}{6de9324b0be214844634660e15f1fca4}
+      \strng{bibnamehash}{d9d5933917f907ae5a0f32c1e36c391e}
+      \strng{authorbibnamehash}{d9d5933917f907ae5a0f32c1e36c391e}
+      \strng{authornamehash}{d9d5933917f907ae5a0f32c1e36c391e}
+      \strng{authorfullhash}{6de9324b0be214844634660e15f1fca4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Clinical Medical Physics}
+      \field{number}{3}
+      \field{title}{Breaking bad imrt qa practice}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{pages}{154\bibrangedash 165}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1120/jacmp.v16i3.5242
+      \endverb
+    \endentry
+    \entry{Wendling}{article}{}
+      \name{author}{7}{}{%
+        {{hash=3f8bc231be6b29fd2630aeea85c29ef5}{%
+           family={Wendling},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1bf68f6938f28a11ce8b2cba6c2ef5d4}{%
+           family={Zijp},
+           familyi={Z\bibinitperiod},
+           given={Lambert\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=49dadf4ef6aa434aa5e723066fe6bf11}{%
+           family={McDermott},
+           familyi={M\bibinitperiod},
+           given={Leah\bibnamedelima N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=409d9b28827bd1e7f94281b802016b04}{%
+           family={Smit},
+           familyi={S\bibinitperiod},
+           given={Ewoud\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0d6565d8150fcd2e3a76d227e3dbb8f8}{%
+           family={Sonke},
+           familyi={S\bibinitperiod},
+           given={Jan-Jakob},
+           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=26c45eb6dab21093c27b72e20adff82a}{%
+           family={Mijnheer},
+           familyi={M\bibinitperiod},
+           given={Ben\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2a072ff5d5c3b99cf50e0233e595fd63}{%
+           family={Herk},
+           familyi={H\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9b083d611ef3503ad8f3da1e06daf88}
+      \strng{fullhash}{b38a094c1e70dc2e61c157361fb2d9ce}
+      \strng{bibnamehash}{d9b083d611ef3503ad8f3da1e06daf88}
+      \strng{authorbibnamehash}{d9b083d611ef3503ad8f3da1e06daf88}
+      \strng{authornamehash}{d9b083d611ef3503ad8f3da1e06daf88}
+      \strng{authorfullhash}{b38a094c1e70dc2e61c157361fb2d9ce}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Physics}
+      \field{number}{5}
+      \field{title}{A fast algorithm for Gamma Evaluation in 3D}
+      \field{volume}{34}
+      \field{year}{2007}
+      \field{pages}{1647\bibrangedash 1654}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1118/1.2721657
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

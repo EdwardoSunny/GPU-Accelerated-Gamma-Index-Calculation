@@ -43,6 +43,7 @@ angular_step_size = 1 # degrees
 
 gammaImage = np.zeros((reference.shape[0], reference.shape[1]))
 print(gammaImage.shape)
+# gpu_gamma_image = cuda.jit
 
 #@njit
 # @cuda.jit(device=True)
@@ -141,9 +142,9 @@ def get_passing_rate():
     return str(passDecimal * 100) + '%'
 
 def main():
-    gammaImage = get_gamma_image()
-    st = time.time()
     #gammaImage = get_gamma_image()
+    st = time.time()
+    gammaImage = get_gamma_image()
     et = time.time()
     print("calc time: " + str(et-st))
     plt.figure("Original Reference Image")

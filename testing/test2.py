@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+from numba import cuda
+from numba import *
+
+# f8 is float
+# https://www.geeksforgeeks.org/data-type-object-dtype-numpy-python/
+test_gpu = cuda.jit(uint32, device=True)(test)
+
 import numpy as np
 from numba import cuda
 from numba import vectorize
@@ -30,3 +38,4 @@ rho2 = np.random.uniform(0.5, 1.5, size=n).astype(np.float32)
 theta2 = np.random.uniform(-np.pi, np.pi, size=n).astype(np.float32)
 
 polar_distance(rho1, theta1, rho2, theta2)
+
