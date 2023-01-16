@@ -46,8 +46,21 @@ def gamma_index(dose_planned, dose_actual, dose_threshold, dta_threshold):
 
   return gamma
 
-dose_actual = cv2.imread('ref6.jpg', 0).astype(np.float32) # reference image
-dose_planned = cv2.imread('test6.jpg', 0).astype(np.float32) # test image
+def ensure_BW_only(img):
+  copy = img
+  for i in range(0, img[0].size):
+    # ONLY SAME BECAUSE IMAGE IS SQUARE (for comparing to loop version)
+    for j in range(0, img[0].size):
+      if img[i][j] != 255:
+        copy[i][j] = 0
+      else:
+        copy[i][j] = 255
+  print(copy)
+  return copy
+dose_actual = cv2.imread('ref.png', 0).astype(np.float32) # reference image
+dose_planned = cv2.imread('test.png', 0).astype(np.float32) # test image
+dose_actual = ensure_BW_only(dose_actual)
+dose_planned = ensure_BW_only(dose_planned)
 plt.figure("reference")
 dose_actual_image = plt.imshow(dose_actual, cmap='gray')
 plt.figure("planned")

@@ -31,8 +31,8 @@ from interpolation import interp
 # definition of 0mm is at the left edge of the first pixel
 
 # read as gray scale
-reference = cv2.imread('ref6.jpg', 0) # reference image
-test = cv2.imread('test6.jpg', 0) # test image
+reference = cv2.imread('ref.png', 0) # reference image
+test = cv2.imread('test.png', 0) # test image
 print(type(reference))
 #
 spacing = 0.1 # pixel spacing, scaling between pixel and real life, real units/pixel (e.g. mm/pixel)
