@@ -45,7 +45,7 @@ def gamma_index(dose_planned, dose_actual, dose_threshold, dta_threshold):
   gamma = gamma_index_gpu(dose_planned, dose_actual, dose_threshold, dta_threshold)
 
   return gamma
-
+# TODO this won't work for images with gray pixels. Need to rewrite to some how ensure no specks
 def ensure_BW_only(img):
   copy = img
   for i in range(0, img[0].size):
@@ -57,6 +57,7 @@ def ensure_BW_only(img):
         copy[i][j] = 255
   print(copy)
   return copy
+
 dose_actual = cv2.imread('ref.png', 0).astype(np.float32) # reference image
 dose_planned = cv2.imread('test.png', 0).astype(np.float32) # test image
 dose_actual = ensure_BW_only(dose_actual)
