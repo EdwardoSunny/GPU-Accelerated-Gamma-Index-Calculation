@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage[backend=biber]{biblatex}
+\usepackage{graphicx}
 \addbibresource{ref.bib}
 
 \title{Can Numba and CUDA Python Development Kits be used on a GPU to Speed Up Gamma Index Calculations used in Radiotherapy?}
@@ -19,15 +20,38 @@
 \maketitle
 \section{Introduction}
 \subsection{Radiotherapy Background}
-Cancer is the second leading cause of death following heart disease. In 2020 alone, cancer alone was responsible for the deaths of 602,350 deaths in the United states (\textcite{CDC}). However, with the aid of modern radiotherapy procedures, this figure can be significantly reduced. This procedure of radiotherapy is defined to include: patient consultation, simulation, treatment planning, and treatment delivery (\textcite{SBU}). In the patient consultation step, patients are initally diagnosed and informed of their condition. Following the consultation, the patients are taken to imaging facilities to capture images of their tumor(s) where contrast agents/chemicals are used to exaggerate the location of the tumor(s). Computer simulations are then used to define the location of the tumor and configurations of the treatment. Following this is the treatment planning step, where radiation oncologists, physicists, and dosimetrists are involved to plan the radiotherapy for the patient. The goal of this step is to deliver high doses to the tumor while limiting the damage to the surround health tissues, thereby reducing the side effects of radiotherapy. During this step, a commerical treatment planning system is often used to calculate treatment plans or how much radiation to send to a specific location (\textcite{Gardner}). Due to the sensitivity of radiotherapy, these treatment planning system is often rountinely requires the comparision of measured and calculated dose distributions (how the doses are delivered across a part of the patient's body). Given the tumor information of the patient, the treatment planning system will generate radiation delivery plans. However, to ensure the accuracy of dose delivery to the patient and minimize accidential radiation exposure, quality assurance (QA) is essential to treatment planning. Techniques involved in this quality assurance steps often involve the comparision of dose distributions of a measured dose distribution, obtained from running the treatment plan and irradiating a radiation detection matrix (fig XX), against the original treatment plan (\textcite{Low}).
+Cancer is the second leading cause of death following heart disease. In 2020 alone, cancer alone was responsible for the deaths of 602,350 deaths in the United states (\textcite{CDC}). However, with the aid of modern radiotherapy procedures, this figure can be significantly reduced. Starting with the invention of the X-ray by the German scientist Conrad Roentgen, radiotherapy had made great strides in development more and more precise ways of targeting cancer cells and sparing health tissue. Begining with crude methods involving radium and low-voltage diagnostic X-ray machines, today radiotherapy has evolved into a complicated procedure that involves various imaging modes and treatment deliver modes that ensure the highest accuracy. This procedure of radiotherapy is defined to include: patient consultation, simulation, treatment planning, and treatment delivery (\textcite{SBU}). In the patient consultation step, patients are initially diagnosed and informed of their condition. Following the consultation, the patients are taken to imaging facilities to capture images of their tumor(s) where contrast agents/chemicals are used to exaggerate the location of the tumor(s). Computer simulations are then used to define the location of the tumor and configurations of the treatment. Following this is the treatment planning step, where radiation oncologists, physicists, and dosimeters are involved to plan the radiotherapy for the patient. The goal of this step is to deliver high doses to the tumor while limiting the damage to the surround health tissues, thereby reducing the side effects of radiotherapy.
 
+\subsection{Quality Assurance}
+As modern radiotherapy is a complex process that involve many steps as mentioned above, quality assurance (QA) methods are needed to reduce errors and ensure the quality of results before moving on to delivering the doses on the patients. One of the most important QA steps is the assurance of the delivered doses with the calculated doses of a treatment planning system. In planning the treatment based on a patient's body, a commercial treatment planning system is often used to calculate treatment plans or how much radiation to send to a specific location (\textcite{Gardner}). Due to the sensitivity of radiotherapy, these treatment planning system is often routinely requires the comparison of measured and calculated dose distributions (how the doses are delivered across a part of the patient's body). Given the tumor information of the patient, the treatment planning system will generate radiation delivery plans.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1.2]{images/map.png}
+  \caption{Sun Nuclear MapCHECK3 Radiation QA Matrix}
+  \label{fig:mat}
+\end{figure}
+
+
+However, to ensure the accuracy of dose delivery to the patient and minimize accidental radiation exposure, QA is essential to treatment planning. Techniques involved in this quality assurance steps often involve the comparison of dose distributions of a measured dose distribution, obtained from running the treatment plan on a radiation detection matrix (Figure \ref{fig:mat}) that is sensitive to radiation and will measure the specific doses delivered at specific coordinates (\textcite{sunnuclear}).
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{images/examplemap.png}
+  \caption{Example MapCHECK QA (on left) and planned dose distribution (on right)}
+  \label{fig:ex}
+\end{figure}
+
+An example of the measured dose distribution versus the planned can be seen in (This measured dose distribution will be compared against the intended/planned distribution with various mathematical comparison methods to judge the accuracy of the treatment planning system and make adjustments accordingly to ensure precision of treatment (\textcite{Low}).
 
 \section{Literature Review}
 \subsection{QA Methods}
-Over the past decades, many metrics have been developed to improve QA. These methods are mathematical formulas/algorithms that often searches through and compares the calculated and measured dose distributions (dose images) in 2D or 3D to give a value that signifies the resemblance and therefore the accuracy of a treatment planner. For instance, Cheng $et. al$, used a pass-fail criteria for the dose difference (DD), which is the difference between the measured and calculated dose on a pixel, and distance to agreement (DTA), which is the distance/radius in which the algorithm searches on the dose distribution (\textcite{Cheng}). Each point within this search circle defined by the DTA is analyzed (Cheng). Similar metrics have been defined like the Global Gamma evaluation, maxiumum allowed dose difference (MADD) (Jiang), divide and conquer (D\&C) (\textcite{Stojadinovic}), and more. However, one metric has been defined as the standard of QA metrics in the field of radiotherapy, that is the gamma index (\textcite{Low}).
+Over the past decades, many metrics have been developed to improve QA. These methods are mathematical formulas/algorithms that often searches through and compares the calculated and measured dose distributions (dose images) in 2D or 3D to give a value that signifies the resemblance and therefore the accuracy of a treatment planner. For instance, Cheng $et. al$, used a pass-fail criteria for the dose difference (DD), which is the difference between the measured and calculated dose on a pixel, and distance to agreement (DTA), which is the distance/radius in which the algorithm searches on the dose distribution (\textcite{Cheng}). Each point within this search circle defined by the DTA is analyzed (Cheng). Similar metrics have been defined like the Global Gamma evaluation, maximum allowed dose difference (MADD) (Jiang), divide and conquer (D\&C) (\textcite{Stojadinovic}), and more. However, one metric has been defined as the standard of QA metrics in the field of radiotherapy, that is the gamma index (\textcite{Low}).
 
 \subsection{$\gamma$ index}
-The gamma index, originally proposed by Low et. al (\textcite{Low}), provides a representative and numerical metric that simultaneously incorporsates the dose and distance criteria as mentioned above. It combines the accuracies of previosly proposed metrics into one $\gamma$ index. This formula is mathematically defined by the following formulas:
+The gamma index, originally proposed by Low et. al (\textcite{Low}), provides a representative and numerical metric that simultaneously incorporates the dose and distance criteria as mentioned above. It combines the ac curacies of previously proposed metrics into one $\gamma$ index. This formula is mathematically defined by the following formulas:
 \\
 \\
 \begin{align}

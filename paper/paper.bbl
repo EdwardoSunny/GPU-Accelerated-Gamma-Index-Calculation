@@ -688,6 +688,19 @@
       \verb 10.1021/ci1004948
       \endverb
     \endentry
+    \entry{sunnuclear}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sun Nuclear}
+      \field{title}{MapCHECK® 3}
+      \verb{urlraw}
+      \verb https://www.sunnuclear.com/products/mapcheck-3
+      \endverb
+      \verb{url}
+      \verb https://www.sunnuclear.com/products/mapcheck-3
+      \endverb
+    \endentry
     \entry{Michalakes}{article}{}
       \name{author}{2}{}{%
         {{hash=412d4c297ba90053d9b51da97ad93bfc}{%

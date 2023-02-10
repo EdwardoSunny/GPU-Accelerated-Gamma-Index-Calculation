@@ -25,6 +25,7 @@
     "Christopherpoole"
     "Matlab"
     "intel"
-    "SBU"))
+    "SBU"
+    "sunnuclear"))
  :bibtex)
 
