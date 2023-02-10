@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \addbibresource{ref.bib}
 
-\title{Can Numba and CUDA Python Development Kits be used on a GPU to Speed Up Gamma Index Calculations used in Radiotherapy?}
+\title{Can Numba and CUDA Python Development Kits be used on a GPU to Speed Up 2D Gamma Index Calculations used in Radiotherapy?}
 
 \author{
   Sun, Edward$^{1}$
@@ -55,6 +55,17 @@ The gamma index, originally proposed by Low et. al (\textcite{Low}), provides a 
 \\
 \\
 \begin{align}
+  \Gamma = \frac{|dose_{planned} - dose_{actual}|}{dose_{threshold}} \\
+\end{align}
+\\
+\\
+This original formula for the simple gamma index is robust and reliable. The calculation is also relatively simple, as it is a simple subtraction, this calculation can be achieved with has been adopted and accepted widely. Since then, researchers have been making modifications to this algorithm adding more metrics for greater accuracy or changing the formula for greater efficency when running on computers' CPU or GPU (\textcite{Gu}).
+
+One popular modification is to add DTA as a factor into the calculation of the index. Essentially, this modified algorithm is a iterative process which passes over every pixel on a dose distribution image. For the sake of easy understanding, we will use a 2D example, but the same logic can be applied for 3D dose distributions as well. To begin the search, we will start on one reference pixel (calculated dose distribution) and test pixel (measured dose distribution), where dose distributions in this case are defined as 2D grayscale images. Then, the iteration begins with defining a reference position in real units based on a pixel on the reference image and then iterating through the circle on the test image. Test pixel within this search radius is then evaluated with the formulas above along with a percentage passing criteria, which means that this pixel passes the $\gamma$ index test if it is within this many percentage relative to the reference pixel. During this process, as the iteration uses real units (mm), it may generate a position that does not land on a pixel. Here, interpolation is used to estimate the value at that position within the search radius. This search radius for each reference pixel is actually the DTA and the percentage is the DTA criterion.
+>>>>>>> 4ad9b1ea5a9bf38c7509ee189a7fedf264133f3c
+\\
+\\
+\begin{align}
   l = \sqrt{\frac{r^{2}(r_{m}, r)}{\Delta d^{2}_{M}} + \frac{\delta^{2}(r_{m}, r)}{\Delta D^{2}_{M}}} \\
   r(r_{m}, r) = \lvert r-r_{m} \lvert \\
   \delta(r_{m}, r) = D(r)-D_{m}(r_{m}) \\
@@ -62,9 +73,7 @@ The gamma index, originally proposed by Low et. al (\textcite{Low}), provides a 
 \end{align}
 \\
 \\
-Essentially, this algorithm is a iterative process which passes over every pixel on a dose distribution image. For the sake of easy understanding, we will use a 2D example, but the same logic can be applied for 3D dose distributions as well. To begin the search, we will start on one reference pixel (calculated dose distribution) and test pixel (measured dose distribution), where dose distributions in this case are defined as 2D grayscale images. Then, the iteration begins with defining a reference position in real units based on a pixel on the reference image and then iterating through the circle on the test image. Test pixel within this search radius is then evaluated with the formulas above along with a percentage passing criteria, which means that this pixel passes the $\gamma$ index test if it is within this many percentage relative to the reference pixel. During this process, as the iteration uses real units (mm), it may generate a position that does not land on a pixel. Here, interpolation is used to estimate the value at that position within the search radius. This search radius for each reference pixel is actually the DTA and the percentage is the DTA criterion.
-
-Mathmatically, the Eq. (1) describes the intermediate value $l$ calculated for each pixel, where $r^{2}(r_{m}, r)$ defines the square of the distance between the reference and the test pixel. The parameters $r_{m}$ of $r^{2}(r_{m}, r)$ is the real position of the measured pixel and r defines the real position of the test pixel, as pointed out by Eq. (2). $\delta^{2}(r_{m}, r)$ defines the square of the difference in pixel value (in real terms, pixel value is radiation dose intensity) where $r_{m}$ represents the pixel value of the measured pixel and $r$ represents the pixel value of the test pixel, as pointed out by Eq. (3). $r^{2}(r_{m}, r)$ is then divded by $\Delta d^{2}_{M}$ which is the DTA or search radius. $\delta^{2}(r_{m}, r)$ is then divded by $\Delta D^{2}_{M}$ which is the DTA criterion or acceptable passing percentage. This whole term is then square-rooted to produce the intermediate gamma value. This process is then repeated for all values within that radius for that refernce pixel. The final gamma index for that reference value is taken as the minimum value of all these previously calculated intermediate values. Then, this is repeated for all reference pixels from the reference image to produce one gamma value for each reference pixel, thereby creating a gamma image.
+Mathmatically, as seen in the equations above, Eq. (1) describes the intermediate value $l$ calculated for each pixel, where $r^{2}(r_{m}, r)$ defines the square of the distance between the reference and the test pixel. The parameters $r_{m}$ of $r^{2}(r_{m}, r)$ is the real position of the measured pixel and r defines the real position of the test pixel, as pointed out by Eq. (2). $\delta^{2}(r_{m}, r)$ defines the square of the difference in pixel value (in real terms, pixel value is radiation dose intensity) where $r_{m}$ represents the pixel value of the measured pixel and $r$ represents the pixel value of the test pixel, as pointed out by Eq. (3). $r^{2}(r_{m}, r)$ is then divded by $\Delta d^{2}_{M}$ which is the DTA or search radius. $\delta^{2}(r_{m}, r)$ is then divded by $\Delta D^{2}_{M}$ which is the DTA criterion or acceptable passing percentage. This whole term is then square-rooted to produce the intermediate gamma value. This process is then repeated for all values within that radius for that refernce pixel. The final gamma index for that reference value is taken as the minimum value of all these previously calculated intermediate values. Then, this is repeated for all reference pixels from the reference image to produce one gamma value for each reference pixel, thereby creating a gamma image.
 
 \subsection{Challenges to the $\gamma$ Index}
 With such a iterative and complex system involving intensive interpolation and calulations, Gu et. al (\textcite{Gu}) highlighted the concerns of speed with the $\gamma$ index calculation, where clinically relevant dose distribution sizes is very time-consuming to compare. Many researchers have attempted to improve the accuracy and efficiency of the algorithm (\textcite{Bakai}, \textcite{Depuydt}, \textcite{Stock}, \textcite{Jiang}, \textcite{Spezi}) while others focused on speed (\textcite{Ju}, \textcite{Chen}, \textcite{Wendling}).
@@ -77,8 +86,29 @@ However, within recent years, Python has been a popular choice within the area o
 Implementation of the gamma index in python isn’t new. Many opensource repositories on github have produced efficient gamma index calculation scripts\footnote[1]{github.com/christopherpoole/pygamma} Similarly, Biggs et. al (\textcite{Biggs}) have proposed and maintained a community driven project named pymedphys where CPU driven gamma index codes and other medical physics related codes have been implemented. GPU acceleration with gamma index isn’t new either. For instance, Gu et. al had proposed gamma index acceleration with a GPU in 2005 (\textcite{Gu}). There have also been GPU acceleration toolkits released by MATLAB and researchers have implemented similar algorithms of the gamma index in MATLAB (\textcite{Matlab}). However, as seen, there is GPU acceleration in MATLAB, but not implemented with Numba and CUDA in python. Similarly, there have been gamma index implemented in python, however, there has not been GPU accelerated gamma index calculations.
 
 Python is one of the most popular data analysis and processing tool in the software engineering world. With the popularity of this language, more tools should be made avaliable for use in research. Thus, the reasoning behind the choice of this project is due to the high popularity of python, the large community support for GPU acceleration in python, and the prevalent use of the gamma index in radiotherapy. This study aims to fill this gap by creating a GPU accelerated gamma index framework for 1D, 2D, and 3D dose distributions in python via Numba and python CUDA. This will be achieved with a Nvidia GTX 1080 GPU (\textcite{NVidia}) running on PopOS 22.05 LTS with Nvidia CUDA support built in. For the algorithm, this study will be based off of Low et. al (\textcite{Low})’s original gamma index paper witht no modifications made to the algorithm. This study aims to test the feasibility of implementing the gamma index with Numba and CUDA while also benchmarking this against other frameworks within other languages (MATLAB, C, etc) to analyze if Python Numba and CUDA accelerated gamma index will be competitive compared to these other languages’ frameworks. As this study will be benchmarking and testing a framework with a limited set of testing data, it will be suitable for an experimental design methodology. In this next section, the specific methodologies will be more clearly defined.
-\pagebreak
 
+\section{Methods}
+\subsection{Choice of Language}
+In traditional GPU-acceleration of the $\gamma$ index (\textcite{Gu}) programming languages like C/C++ or MATLAB are often used. C/C++ similarly has CUDA development support from NVidia, but the syntax is often more complicated than that used by Python. MATLAB has its own GPU Acceleration toolkit as well, but MATLAB is a expensive paid service which may make it unfeasible for some researchers who may not have the resources to purchase such a service. Thus, Python is a better language of choice for this task due to is easy syntax to implement, which may prove beneficial for researchers that want to understand or improve the source code of this project, and it is free and open-source for anyone to download and use. But the main downfall of Python as oppose to C/C++ or MATLAB is its slow speed due to Python being an interpreted language as explained earlier. Thus, it is important to also investigate weather or not the GPU acceleration through Numba and CUDA will be significant enough to overcome these performance differences based on their inherit language designs.
+
+\subsection{Program Design}
+As there are many modified algorithms out in the research community on how to calculate the $\gamma$ index, I chose to write accelerated code for the version based on only the dose differences, dose threshold, and DTA (Eqn. 1 and 2) and the modified version of \textcite{Low}. (Eqn. 3 -6). I decided to select the first version of the calculation based of its simplicity and popularity and the second I selected based off its relative accuracy as well as its popularity as many other researchers have used these formulas in their works (\textcite{Gu}).
+
+First, for the simpler only dose difference based calculation, the operation of finding the dose difference was achieved through the following simple matrix subtraction, where each matrix is the input 2D dose distribution. Then, the DTA criteria is implemented via the following formula:
+\\
+\\
+\begin{align}
+  (TBD, Debugging code rn) \\
+\end{align}
+\\
+\\
+Then, this is combined with the regular gamma index formula through only expressing the minimum value between this calulated DTA and the gamma index.
+
+\subsection{Bench Marking}
+For comparing the feasbility of this accelerated gamma index calculation, I compared multiple open-source projects all attempting to achieve the same purpose of calculating the $\gamma$ index. Specifically, I used projects written in Python and MATLAB primarily to compare to my codes. For Python, I used pygamma by christopherpoole \footnote[1]{github.com/christopherpoole/pygamma}, gamma-index by janpipek \footnote[2]{github.com/janpipek/gamma\_index}, gamma-py also by janpipek \footnote[3]{gist.github.com/janpipek/334c2533b87cd75c3f59}, pymedphys \footnote[5]{https://github.com/pymedphys/pymedphys} and also my own versions of non-accelerated loop-based $\gamma$ index calculation (as detailed in the $\gamma$ index section of this paper) and a matrix version the calculation. For MATLAB, I used mwgeurts' CalcGamma \footnote[5]{https://github.com/mwgeurts/gamma}. In total, there are 7 comparision codes that I ran and timed as shown in Table 1. These are used as a benchmark to later compare with the accelerated of the calculation.
+
+
+\pagebreak
 \printbibliography
 
 \end{document}
